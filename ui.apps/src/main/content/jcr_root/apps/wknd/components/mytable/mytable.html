@@ -1,0 +1,33 @@
+Table Component
+<div class="mytablecomponent">
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call = "${clientlib.all @ categories = 'mytablecomp'}"/>
+    <sly data-sly-use.model="com.adobe.aem.guides.wknd.core.models.MyTableModel">
+        <!--this path will be fetch by js in our ajax call -->
+        <input type="hidden" name="resourcePath" value="${resource.path}">
+
+       <p>${model.noCols} ## ${model.noRows}</p>
+       <table class="myTableTest"border="2">
+           <sly data-sly-test="${model.boolValue == true}">
+               <tr class="tableheading">
+                   <sly data-sly-list.test="${model.numOfColArray}">
+                       <th></th>
+                   </sly>
+               </tr>
+           </sly>
+       <sly data-sly-list.nRows = "${model.numOfRowArray}">
+             <tr class = "row">
+                    <sly data-sly-list.nCols="${model.numOfColArray}">
+                          <td class="column">
+                              Content
+                           <!-- <section data-sly-resource="${'./container' @ resourceType='core/wcm/components/container/v1/container'}"></section> -->
+                          </td>
+                    </sly>
+             </tr>
+       </sly>
+       </table>
+        ## ${model.boolValue}
+
+    </sly>
+</div>
+

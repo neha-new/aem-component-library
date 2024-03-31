@@ -1,0 +1,71 @@
+<!--DATA SLY TEST -->
+<p>****** Data SLY Test ******* </p>
+<sly data-sly-test="${!wcmmode.edit}" >
+    <p>This is my table</p>
+</sly>
+
+<!-- Data SLY Test -->
+<p>****** Data SLY Test - 2 ******* </p>
+<sly data-sly-test.flag="${properties.sling:resourceType}">
+    <sly data-sly-test="${flag}">
+        <p>${properties.sling:resourceType}</p>
+    </sly>
+</sly>
+
+<!--
+  Used to set the variable and used within the scope of the block
+  In below code it sets the size to the variable length
+-->
+<!-- DATA SLY SET-->
+<p>****** Data SLY Set ******* </p>
+<div data-sly-set.length="vivek">
+    Hello World ${length}
+</div>
+
+<!-- Conditional Operator-->
+<p>****** Data SLY Conditions ******* </p>
+<div data-sly-test="${resource.name == 'mytable' && currentPage.path == '/content/wknd/us/en/magazine' }">
+    <p>Component Name: ${resource.name}</p>
+    <p>Page Path: ${currentPage.path}</p>
+</div>
+
+<!--DATA SLY REPEAT-->
+<p>****** Data SLY Repeat ******* </p>
+<div data-sly-repeat.childPages="${currentPage.getParent.listChildren}">
+    <span>Name: ${childPages.name}</span>
+    <span>Count: ${childPagesList.count}</span>
+    <span>Index: ${childPagesList.index}</span>
+</div>
+<!--DATA SLY List-->
+<p>****** Data SLY List ******* </p>
+<div data-sly-list.childPages="${currentPage.getParent.listChildren}">
+    <span>Name: ${childPages.name}</span>
+    <span>Count: ${childPagesList.count}</span>
+    <span>Index: ${childPagesList.index}</span>
+</div>
+
+<!--DATA SLY ATTRIBUTE-->
+<p>****** Data SLY Attribute ******* </p>
+<div class="neha" data-sly-attribute.required="${resource.name=='my'}">
+    Tis is setting data-sly-attribute
+</div>
+
+<!--DATA SLY UNWRAP-->
+<p>****** Data SLY Unwrap ******* </p>
+<div>
+    <span data-sly-unwrap>Practice AEM -  Unwarp</span>
+</div>
+
+<!--DATA SLY Resource-->
+<p>****** Data SLY Resource ******* </p>
+
+<div data-sly-resource="${'one' @ resourceType='wknd/components/helloworld' }"></div>
+renders 'one' node via the component practice/components/text
+
+
+<sly data-sly-use.templateObject="mytemplate.html"
+     data-sly-call="${templateObject.myTemplateRef1 @ passingObjectVar=properties}"></sly>
+
+
+
+

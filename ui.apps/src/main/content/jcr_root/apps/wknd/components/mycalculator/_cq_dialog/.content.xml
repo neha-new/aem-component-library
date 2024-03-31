@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Calculator Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientLibs="[neha.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                            maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tab1
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Addition"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <num1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Enter the first number"
+                                                fieldLabel="First Number"
+                                                name="./addNum1"
+                                                required="{Boolean}true"/>
+                                        <num2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Enter the second number"
+                                                fieldLabel="Second Number"
+                                                name="./addNum2"
+                                                required="{Boolean}true"/>
+                                    </items>
+                            </tab1>
+                            <tab2
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Subtraction"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <num1
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the first number"
+                                            fieldLabel="First Number"
+                                            name="./subNum1"
+                                            required="{Boolean}true"/>
+                                    <num2
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the second number"
+                                            fieldLabel="Second Number"
+                                            name="./subNum2"
+                                            required="{Boolean}true"/>
+                                </items>
+                            </tab2>
+                            <tab3
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Multiplication"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <num1
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the first number"
+                                            fieldLabel="First Number"
+                                            name="./mulNum1"
+                                            required="{Boolean}true"/>
+                                    <num2
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the second number"
+                                            fieldLabel="Second Number"
+                                            name="./mulNum2"
+                                            required="{Boolean}true"/>
+                                </items>
+                            </tab3>
+                            <tab4
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Division"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <num1
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the first number"
+                                            fieldLabel="First Number"
+                                            name="./divNum1"
+                                            required="{Boolean}true"/>
+                                    <num2
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the second number"
+                                            fieldLabel="Second Number"
+                                            name="./divNum2"
+                                            required="{Boolean}true"/>
+                                </items>
+                            </tab4>
+                        </items>
+                    </tabs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
+
