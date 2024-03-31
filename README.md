@@ -1,17 +1,23 @@
-# AEM WKND Sites Project
+# AEM WKND Sites Project - Extended
+
+**Features Built On Top Of WKND Site**
+
+- Extended page component to add new tab
+-
+
 
 ## Adobe Experience Manager compatibility
 
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
-| AEM version            | WKND version |
-|:-----------------------|:------------------------------:|
-| AEM as a Cloud Service | 3.x                 |
-| 6.5 SP17               | 2.x, 3.x                       |
+| AEM version            | WKND version |  
+|:-----------------------|:------------------------------:|  
+| AEM as a Cloud Service | 3.x                 |  
+| 6.5 SP17               | 2.x, 3.x                       |  
 
 ## Released artifacts
 
-![Maven CI](https://github.com/adobe/aem-guides-wknd/actions/workflows/maven.yml/badge.svg)
+![Maven CI](https://github.com/adobe/aem-guides-wknd/actions/workflows/maven.yml/badge.svg)  
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd)
 
 This is a sample Adobe Experience Manager project for a full stack Sites implementation for a fictitious lifestyle brand, WKND.
@@ -30,7 +36,7 @@ A corresponding [tutorial is available](https://experienceleague.adobe.com/docs/
 
 ### AEM as a Cloud Service
 
-To deploy WKND to AEM as a Cloud Service, this project's source code must be deployed to AEM via Cloud Manager. 
+To deploy WKND to AEM as a Cloud Service, this project's source code must be deployed to AEM via Cloud Manager.
 
 1. Clone this Git repository
 2. Push the `main` branch to your Cloud Manager's Git repository
@@ -47,27 +53,27 @@ Pre-compiled AEM packages are available under the latest release for easy instal
 
 ## How to build
 
-For **AEM as a Cloud Service SDK**: 
+For **AEM as a Cloud Service SDK**:
 
-```
-$ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage
-```
+```  
+$ cd aem-guides-wknd/  
+$ mvn clean install -PautoInstallSinglePackage  
+```  
 
-For **AEM 6.5.x**: 
+For **AEM 6.5.x**:
 
-```
-$ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage -Pclassic
-```
+```  
+$ cd aem-guides-wknd/  
+$ mvn clean install -PautoInstallSinglePackage -Pclassic  
+```  
 
 ## System Requirements
 
-WKND Version | AEM as a Cloud Service | AEM 6.5       | Java SE | Maven
--------------|------------------------|---------------|---------|---------
-Latest (main branch)| Continual              | **6.5.17.0+** |  8, 11  | 3.3.9+
-[v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual | 6.5.10+       | 8, 11 | 3.3.9+
-[v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual | 6.5.4+        | 8, 11 | 3.3.9+
+WKND Version | AEM as a Cloud Service | AEM 6.5       | Java SE | Maven  
+-------------|------------------------|---------------|---------|---------  
+Latest (main branch)| Continual              | **6.5.17.0+** |  8, 11  | 3.3.9+  
+[v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual | 6.5.10+       | 8, 11 | 3.3.9+  
+[v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual | 6.5.4+        | 8, 11 | 3.3.9+  
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
@@ -79,10 +85,10 @@ By default, sample content from `ui.content.sample` will be deployed and install
 
 Including `ui.content.sample` will **overwrite** any authored content during each build. If you wish to disable this behavior modify the [filter.xml](ui.content.sample/src/main/content/META-INF/vault/filter.xml) file and update the `mode=merge` attribute to avoid overwriting the paths.
 
-```diff
-- <filter root="/content/wknd" />
-+ <filter root="/content/wknd" mode="merge"/>
-```
+```diff  
+- <filter root="/content/wknd" />  
++ <filter root="/content/wknd" mode="merge"/>  
+```  
 
 ### Powered by Adobe Stock
 
